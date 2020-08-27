@@ -1,0 +1,648 @@
+Last login: Sat Aug 22 19:21:46 on ttys003
+You have mail.
+ ~/ ssh dann@10.0.2.2
+The authenticity of host '10.0.2.2 (10.0.2.2)' can't be established.
+ECDSA key fingerprint is SHA256:dC/GHPMtLuTAkFhvycOSUBKzrTybPruZYnhqxTo0UD7.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Warning: Permanently added '10.0.2.2' (ECDSA) to the list of known hosts.
+dann@10.0.2.2's password: 
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-42-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun 23 Aug 2020 01:24:42 PM UTC
+
+  System load:  0.03              Processes:               114
+  Usage of /:   23.0% of 8.77GB   Users logged in:         1
+  Memory usage: 5%                IPv4 address for enp0s3: 10.0.2.2
+  Swap usage:   0%
+
+
+12 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Sun Aug 27 13:16:15 2020
+dann@dann:~$ sudo su
+[sudo] password for dann: 
+root@dann:/home/dann# sudo apt update
+Hit:1 http://ru.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease [111 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease [98.3 kB]
+Get:4 http://ru.archive.ubuntu.com/ubuntu focal-security InRelease [107 kB]
+Fetched 317 kB in 1s (470 kB/s)   
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+12 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@dann:/home/dann# sudo apt install nginx
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0 libjpeg-turbo8 libjpeg8 libnginx-mod-http-image-filter
+  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream libtiff5 libwebp6 libxpm4 nginx-common nginx-core
+Suggested packages:
+  libgd-tools fcgiwrap nginx-doc ssl-cert
+The following NEW packages will be installed:
+  fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0 libjpeg-turbo8 libjpeg8 libnginx-mod-http-image-filter
+  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream libtiff5 libwebp6 libxpm4 nginx nginx-common nginx-core
+0 upgraded, 17 newly installed, 0 to remove and 12 not upgraded.
+Need to get 2,431 kB of archives.
+After this operation, 7,891 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 fonts-dejavu-core all 2.37-1 [1,041 kB]
+Get:2 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 fontconfig-config all 2.13.1-2ubuntu3 [28.8 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libfontconfig1 amd64 2.13.1-2ubuntu3 [114 kB]
+Get:4 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libjpeg-turbo8 amd64 2.0.3-0ubuntu1.20.04.1 [117 kB]
+Get:5 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2,194 B]
+Get:6 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libjbig0 amd64 2.1-3.1build1 [26.7 kB]
+Get:7 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libwebp6 amd64 0.6.1-2 [185 kB]
+Get:8 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libtiff5 amd64 4.1.0+git191117-2build1 [161 kB]
+Get:9 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libxpm4 amd64 1:3.5.12-1 [34.0 kB]
+Get:10 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libgd3 amd64 2.2.5-5.2ubuntu2 [118 kB]
+Get:11 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-common all 1.18.0-0ubuntu1 [37.3 kB]
+Get:12 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-0ubuntu1 [14.3 kB]
+Get:13 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-0ubuntu1 [12.6 kB]
+Get:14 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-mail amd64 1.18.0-0ubuntu1 [42.3 kB]
+Get:15 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-stream amd64 1.18.0-0ubuntu1 [66.9 kB]
+Get:16 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-core amd64 1.18.0-0ubuntu1 [425 kB]
+Get:17 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx all 1.18.0-0ubuntu1 [3,624 B]
+Fetched 2,431 kB in 1s (4,337 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package fonts-dejavu-core.
+(Reading database ... 70848 files and directories currently installed.)
+Preparing to unpack .../00-fonts-dejavu-core_2.37-1_all.deb ...
+Unpacking fonts-dejavu-core (2.37-1) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../01-fontconfig-config_2.13.1-2ubuntu3_all.deb ...
+Unpacking fontconfig-config (2.13.1-2ubuntu3) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../02-libfontconfig1_2.13.1-2ubuntu3_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.13.1-2ubuntu3) ...
+Selecting previously unselected package libjpeg-turbo8:amd64.
+Preparing to unpack .../03-libjpeg-turbo8_2.0.3-0ubuntu1.20.04.1_amd64.deb ...
+Unpacking libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.1) ...
+Selecting previously unselected package libjpeg8:amd64.
+Preparing to unpack .../04-libjpeg8_8c-2ubuntu8_amd64.deb ...
+Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../05-libjbig0_2.1-3.1build1_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-3.1build1) ...
+Selecting previously unselected package libwebp6:amd64.
+Preparing to unpack .../06-libwebp6_0.6.1-2_amd64.deb ...
+Unpacking libwebp6:amd64 (0.6.1-2) ...
+Selecting previously unselected package libtiff5:amd64.
+Preparing to unpack .../07-libtiff5_4.1.0+git191117-2build1_amd64.deb ...
+Unpacking libtiff5:amd64 (4.1.0+git191117-2build1) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../08-libxpm4_1%3a3.5.12-1_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.12-1) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../09-libgd3_2.2.5-5.2ubuntu2_amd64.deb ...
+Unpacking libgd3:amd64 (2.2.5-5.2ubuntu2) ...
+Selecting previously unselected package nginx-common.
+Preparing to unpack .../10-nginx-common_1.18.0-0ubuntu1_all.deb ...
+Unpacking nginx-common (1.18.0-0ubuntu1) ...
+Selecting previously unselected package libnginx-mod-http-image-filter.
+Preparing to unpack .../11-libnginx-mod-http-image-filter_1.18.0-0ubuntu1_amd64.deb ...
+Unpacking libnginx-mod-http-image-filter (1.18.0-0ubuntu1) ...
+Selecting previously unselected package libnginx-mod-http-xslt-filter.
+Preparing to unpack .../12-libnginx-mod-http-xslt-filter_1.18.0-0ubuntu1_amd64.deb ...
+Unpacking libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1) ...
+Selecting previously unselected package libnginx-mod-mail.
+Preparing to unpack .../13-libnginx-mod-mail_1.18.0-0ubuntu1_amd64.deb ...
+Unpacking libnginx-mod-mail (1.18.0-0ubuntu1) ...
+Selecting previously unselected package libnginx-mod-stream.
+Preparing to unpack .../14-libnginx-mod-stream_1.18.0-0ubuntu1_amd64.deb ...
+Unpacking libnginx-mod-stream (1.18.0-0ubuntu1) ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../15-nginx-core_1.18.0-0ubuntu1_amd64.deb ...
+Unpacking nginx-core (1.18.0-0ubuntu1) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../16-nginx_1.18.0-0ubuntu1_all.deb ...
+Unpacking nginx (1.18.0-0ubuntu1) ...
+Setting up libxpm4:amd64 (1:3.5.12-1) ...
+Setting up nginx-common (1.18.0-0ubuntu1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib/systemd/system/nginx.service.
+Setting up libjbig0:amd64 (2.1-3.1build1) ...
+Setting up libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1) ...
+Setting up libwebp6:amd64 (0.6.1-2) ...
+Setting up fonts-dejavu-core (2.37-1) ...
+Setting up libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.1) ...
+Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
+Setting up libnginx-mod-mail (1.18.0-0ubuntu1) ...
+Setting up fontconfig-config (2.13.1-2ubuntu3) ...
+Setting up libnginx-mod-stream (1.18.0-0ubuntu1) ...
+Setting up libtiff5:amd64 (4.1.0+git191117-2build1) ...
+Setting up libfontconfig1:amd64 (2.13.1-2ubuntu3) ...
+Setting up libgd3:amd64 (2.2.5-5.2ubuntu2) ...
+Setting up libnginx-mod-http-image-filter (1.18.0-0ubuntu1) ...
+Setting up nginx-core (1.18.0-0ubuntu1) ...
+Setting up nginx (1.18.0-0ubuntu1) ...
+Processing triggers for ufw (0.36-6) ...
+Processing triggers for systemd (245.4-4ubuntu3.2) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9) ...
+root@dann:/home/dann# sudo systemctl stop nginx.service
+root@dann:/home/dann# sudo systemctl start nginx.service
+root@dann:/home/dann# sudo systemctl enable nginx.service
+Synchronizing state of nginx.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable nginx
+root@dann:/home/dann# sudo apt-get install software-properties-common
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+software-properties-common is already the newest version (0.98.9.2).
+software-properties-common set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 12 not upgraded.
+root@dann:/home/dann# sudo add-apt-repository ppa:ondrej/php
+ Co-installable PHP versions: PHP 5.6, PHP 7.x and most requested extensions are included. Only Supported Versions of PHP (http://php.net/supported-versions.php) for Supported Ubuntu Releases (https://wiki.ubuntu.com/Releases) are provided. Don't ask for end-of-life PHP versions or Ubuntu release, they won't be provided.
+
+Debian oldstable and stable packages are provided as well: https://deb.sury.org/#debian-dpa
+
+You can get more information about the packages at https://deb.sury.org
+
+BUGS&FEATURES: This PPA now has a issue tracker:
+https://deb.sury.org/#bug-reporting
+
+CAVEATS:
+1. If you are using php-gearman, you need to add ppa:ondrej/pkg-gearman
+2. If you are using apache2, you are advised to add ppa:ondrej/apache2
+3. If you are using nginx, you are advised to add ppa:ondrej/nginx-mainline
+   or ppa:ondrej/nginx
+
+PLEASE READ: If you like my work and want to give me a little motivation, please consider donating regularly: https://donate.sury.org/
+
+WARNING: add-apt-repository is broken with non-UTF-8 locales, see
+https://github.com/oerdnj/deb.sury.org/issues/56 for workaround:
+
+# LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
+ More info: https://launchpad.net/~ondrej/+archive/ubuntu/php
+Press [ENTER] to continue or Ctrl-c to cancel adding it.
+
+Hit:1 http://ru.archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:3 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease      
+Get:4 http://ppa.launchpad.net/ondrej/php/ubuntu focal InRelease [23.9 kB]
+Hit:5 http://ru.archive.ubuntu.com/ubuntu focal-security InRelease
+Get:6 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 Packages [46.0 kB]
+Get:7 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main Translation-en [20.9 kB]
+Fetched 90.7 kB in 1s (121 kB/s)                    
+Reading package lists... Done
+root@dann:/home/dann# sudo add-apt-repository ppa:ondrej/apache2
+ This branch follows latest Apache2 packages as maintained by the Debian Apache2 team with couple of compatibility patches on top.
+
+It also includes some widely used Apache 2 modules (if you need some other feel free to send me a request).
+
+BUGS&FEATURES: This PPA now has a issue tracker: https://deb.sury.org/#bug-reporting
+
+PLEASE READ: If you like my work and want to give me a little motivation, please consider donating: https://deb.sury.org/#donate
+ More info: https://launchpad.net/~ondrej/+archive/ubuntu/apache2
+Press [ENTER] to continue or Ctrl-c to cancel adding it.
+
+Hit:1 http://ru.archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:3 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:4 http://ru.archive.ubuntu.com/ubuntu focal-security InRelease
+Get:5 http://ppa.launchpad.net/ondrej/apache2/ubuntu focal InRelease [23.8 kB]
+Hit:6 http://ppa.launchpad.net/ondrej/php/ubuntu focal InRelease
+Get:7 http://ppa.launchpad.net/ondrej/apache2/ubuntu focal/main amd64 Packages [3,704 B]
+Get:8 http://ppa.launchpad.net/ondrej/apache2/ubuntu focal/main Translation-en [2,852 B]
+Fetched 30.4 kB in 1s (41.9 kB/s)                   
+Reading package lists... Done
+root@dann:/home/dann# sudo apt update
+Hit:1 http://ru.archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:3 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:4 http://ru.archive.ubuntu.com/ubuntu focal-security InRelease
+Hit:5 http://ppa.launchpad.net/ondrej/apache2/ubuntu focal InRelease
+Hit:6 http://ppa.launchpad.net/ondrej/php/ubuntu focal InRelease
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+19 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@dann:/home/dann# sudo apt install php7.2-fpm php7.2-common php7.2-mbstring php7.2-xmlrpc php7.2-soap php7.2-gd php7.2-xml php7.2-cli php7.2-curl php7.2-zip
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libpcre3 libxmlrpc-epi0 libzip4 php-common php7.2-json php7.2-opcache php7.2-readline
+Suggested packages:
+  php-pear
+The following NEW packages will be installed:
+  libxmlrpc-epi0 libzip4 php-common php7.2-cli php7.2-common php7.2-curl php7.2-fpm php7.2-gd php7.2-json php7.2-mbstring php7.2-opcache
+  php7.2-readline php7.2-soap php7.2-xml php7.2-xmlrpc php7.2-zip
+The following packages will be upgraded:
+  libpcre3
+1 upgraded, 16 newly installed, 0 to remove and 18 not upgraded.
+Need to get 5,149 kB of archives.
+After this operation, 20.8 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libxmlrpc-epi0 amd64 0.54.2-1.2 [30.5 kB]
+Get:2 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 libpcre3 amd64 2:8.44-1+ubuntu20.04.1+deb.sury.org+1 [240 kB]
+Get:3 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 libzip4 amd64 1.6.1-3+ubuntu20.04.1+deb.sury.org+2 [52.3 kB]
+Get:4 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 php-common all 2:76+ubuntu20.04.1+deb.sury.org+9 [15.7 kB]
+Get:5 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 php7.2-common amd64 7.2.33-1+ubuntu20.04.1+deb.sury.org+1 [935 kB]
+Get:6 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 php7.2-json amd64 7.2.33-1+ubuntu20.04.1+deb.sury.org+1 [19.2 kB]
+Get:7 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 php7.2-opcache amd64 7.2.33-1+ubuntu20.04.1+deb.sury.org+1 [166 kB]
+Get:8 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 php7.2-readline amd64 7.2.33-1+ubuntu20.04.1+deb.sury.org+1 [12.4 kB]
+Get:9 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 php7.2-cli amd64 7.2.33-1+ubuntu20.04.1+deb.sury.org+1 [1,435 kB]
+Get:10 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 php7.2-curl amd64 7.2.33-1+ubuntu20.04.1+deb.sury.org+1 [29.1 kB]
+Get:11 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 php7.2-fpm amd64 7.2.33-1+ubuntu20.04.1+deb.sury.org+1 [1,442 kB]
+Get:12 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 php7.2-gd amd64 7.2.33-1+ubuntu20.04.1+deb.sury.org+1 [27.7 kB]
+Get:13 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 php7.2-mbstring amd64 7.2.33-1+ubuntu20.04.1+deb.sury.org+1 [483 kB]
+Get:14 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 php7.2-soap amd64 7.2.33-1+ubuntu20.04.1+deb.sury.org+1 [116 kB]
+Get:15 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 php7.2-xml amd64 7.2.33-1+ubuntu20.04.1+deb.sury.org+1 [110 kB]
+Get:16 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 php7.2-xmlrpc amd64 7.2.33-1+ubuntu20.04.1+deb.sury.org+1 [13.1 kB]
+Get:17 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 php7.2-zip amd64 7.2.33-1+ubuntu20.04.1+deb.sury.org+1 [21.7 kB]
+Fetched 5,149 kB in 4s (1,415 kB/s)
+(Reading database ... 71075 files and directories currently installed.)
+Preparing to unpack .../libpcre3_2%3a8.44-1+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking libpcre3:amd64 (2:8.44-1+ubuntu20.04.1+deb.sury.org+1) over (2:8.39-12build1) ...
+Setting up libpcre3:amd64 (2:8.44-1+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package libzip4:amd64.
+(Reading database ... 71075 files and directories currently installed.)
+Preparing to unpack .../00-libzip4_1.6.1-3+ubuntu20.04.1+deb.sury.org+2_amd64.deb ...
+Unpacking libzip4:amd64 (1.6.1-3+ubuntu20.04.1+deb.sury.org+2) ...
+Selecting previously unselected package php-common.
+Preparing to unpack .../01-php-common_2%3a76+ubuntu20.04.1+deb.sury.org+9_all.deb ...
+Unpacking php-common (2:76+ubuntu20.04.1+deb.sury.org+9) ...
+Selecting previously unselected package php7.2-common.
+Preparing to unpack .../02-php7.2-common_7.2.33-1+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php7.2-common (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php7.2-json.
+Preparing to unpack .../03-php7.2-json_7.2.33-1+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php7.2-json (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php7.2-opcache.
+Preparing to unpack .../04-php7.2-opcache_7.2.33-1+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php7.2-opcache (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php7.2-readline.
+Preparing to unpack .../05-php7.2-readline_7.2.33-1+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php7.2-readline (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php7.2-cli.
+Preparing to unpack .../06-php7.2-cli_7.2.33-1+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php7.2-cli (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php7.2-curl.
+Preparing to unpack .../07-php7.2-curl_7.2.33-1+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php7.2-curl (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php7.2-fpm.
+Preparing to unpack .../08-php7.2-fpm_7.2.33-1+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php7.2-fpm (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php7.2-gd.
+Preparing to unpack .../09-php7.2-gd_7.2.33-1+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php7.2-gd (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php7.2-mbstring.
+Preparing to unpack .../10-php7.2-mbstring_7.2.33-1+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php7.2-mbstring (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php7.2-soap.
+Preparing to unpack .../11-php7.2-soap_7.2.33-1+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php7.2-soap (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php7.2-xml.
+Preparing to unpack .../12-php7.2-xml_7.2.33-1+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php7.2-xml (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package libxmlrpc-epi0:amd64.
+Preparing to unpack .../13-libxmlrpc-epi0_0.54.2-1.2_amd64.deb ...
+Unpacking libxmlrpc-epi0:amd64 (0.54.2-1.2) ...
+Selecting previously unselected package php7.2-xmlrpc.
+Preparing to unpack .../14-php7.2-xmlrpc_7.2.33-1+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php7.2-xmlrpc (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php7.2-zip.
+Preparing to unpack .../15-php7.2-zip_7.2.33-1+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php7.2-zip (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+Setting up php-common (2:76+ubuntu20.04.1+deb.sury.org+9) ...
+Created symlink /etc/systemd/system/timers.target.wants/phpsessionclean.timer → /lib/systemd/system/phpsessionclean.timer.
+Setting up libzip4:amd64 (1.6.1-3+ubuntu20.04.1+deb.sury.org+2) ...
+Setting up libxmlrpc-epi0:amd64 (0.54.2-1.2) ...
+Setting up php7.2-common (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/7.2/mods-available/calendar.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/ctype.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/exif.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/fileinfo.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/ftp.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/gettext.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/iconv.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/pdo.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/phar.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/posix.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/shmop.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/sockets.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/sysvmsg.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/sysvsem.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/sysvshm.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/tokenizer.ini with new version
+Setting up php7.2-opcache (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/7.2/mods-available/opcache.ini with new version
+Setting up php7.2-xmlrpc (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/7.2/mods-available/xmlrpc.ini with new version
+Setting up php7.2-zip (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/7.2/mods-available/zip.ini with new version
+Setting up php7.2-gd (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/7.2/mods-available/gd.ini with new version
+Setting up php7.2-curl (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/7.2/mods-available/curl.ini with new version
+Setting up php7.2-json (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/7.2/mods-available/json.ini with new version
+Setting up php7.2-mbstring (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/7.2/mods-available/mbstring.ini with new version
+Setting up php7.2-soap (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/7.2/mods-available/soap.ini with new version
+Setting up php7.2-xml (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/7.2/mods-available/dom.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/simplexml.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/wddx.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/xml.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/xmlreader.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/xmlwriter.ini with new version
+
+Creating config file /etc/php/7.2/mods-available/xsl.ini with new version
+Setting up php7.2-readline (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/7.2/mods-available/readline.ini with new version
+Setting up php7.2-cli (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+update-alternatives: using /usr/bin/php7.2 to provide /usr/bin/php (php) in auto mode
+update-alternatives: using /usr/bin/phar7.2 to provide /usr/bin/phar (phar) in auto mode
+update-alternatives: using /usr/bin/phar.phar7.2 to provide /usr/bin/phar.phar (phar.phar) in auto mode
+
+Creating config file /etc/php/7.2/cli/php.ini with new version
+Setting up php7.2-fpm (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/7.2/fpm/php.ini with new version
+Created symlink /etc/systemd/system/multi-user.target.wants/php7.2-fpm.service → /lib/systemd/system/php7.2-fpm.service.
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9) ...
+Processing triggers for systemd (245.4-4ubuntu3.2) ...
+Processing triggers for php7.2-cli (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+Processing triggers for php7.2-fpm (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+root@dann:/etc/php/7.2/fpm# nano php-fpm.conf
+root@dann:/etc/php/7.2/fpm# sudo apt install php7.2
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  php7.2
+0 upgraded, 1 newly installed, 0 to remove and 18 not upgraded.
+Need to get 54.1 kB of archives.
+After this operation, 90.1 kB of additional disk space will be used.
+Get:1 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 php7.2 all 7.2.33-1+ubuntu20.04.1+deb.sury.org+1 [54.1 kB]
+Fetched 54.1 kB in 5s (10.4 kB/s)   
+Selecting previously unselected package php7.2.
+(Reading database ... 71308 files and directories currently installed.)
+Preparing to unpack .../php7.2_7.2.33-1+ubuntu20.04.1+deb.sury.org+1_all.deb ...
+Unpacking php7.2 (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+Setting up php7.2 (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+root@dann:/etc/php/7.2/fpm# sudo update-alternatives --set php /usr/bin/php7.2
+root@dann:/etc/php/7.2/fpm# php -v
+PHP 7.2.33-1+ubuntu20.04.1+deb.sury.org+1 (cli) (built: Aug  7 2020 14:44:56) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+    with Zend OPcache v7.2.33-1+ubuntu20.04.1+deb.sury.org+1, Copyright (c) 1999-2018, by Zend Technologies
+root@dann:/etc/php/7.2/fpm# sudo apt-get install apache2
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libjansson4 liblua5.2-0 ssl-cert
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser openssl-blacklist
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libjansson4 liblua5.2-0 ssl-cert
+0 upgraded, 11 newly installed, 0 to remove and 18 not upgraded.
+Need to get 2,087 kB of archives.
+After this operation, 8,099 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libaprutil1 amd64 1.6.1-4ubuntu2 [84.7 kB]
+Get:2 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-4ubuntu2 [10.5 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libaprutil1-ldap amd64 1.6.1-4ubuntu2 [8,736 B]
+Get:4 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 libjansson4 amd64 2.12-1build1 [28.9 kB]
+Get:5 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 liblua5.2-0 amd64 5.2.4-1.1build3 [106 kB]
+Get:6 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 ssl-cert all 1.0.39 [17.0 kB]
+Get:7 http://ppa.launchpad.net/ondrej/apache2/ubuntu focal/main amd64 libapr1 amd64 1.6.5-1+ubuntu20.04.1+deb.sury.org+1 [97.8 kB]
+Get:8 http://ppa.launchpad.net/ondrej/apache2/ubuntu focal/main amd64 apache2-bin amd64 2.4.46-2+ubuntu20.04.1+deb.sury.org+1 [1,263 kB]
+Get:9 http://ppa.launchpad.net/ondrej/apache2/ubuntu focal/main amd64 apache2-data all 2.4.46-2+ubuntu20.04.1+deb.sury.org+1 [160 kB]
+Get:10 http://ppa.launchpad.net/ondrej/apache2/ubuntu focal/main amd64 apache2-utils amd64 2.4.46-2+ubuntu20.04.1+deb.sury.org+1 [148 kB]
+Get:11 http://ppa.launchpad.net/ondrej/apache2/ubuntu focal/main amd64 apache2 amd64 2.4.46-2+ubuntu20.04.1+deb.sury.org+1 [162 kB]
+Fetched 2,087 kB in 2s (1,329 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libapr1:amd64.
+(Reading database ... 71315 files and directories currently installed.)
+Preparing to unpack .../00-libapr1_1.6.5-1+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking libapr1:amd64 (1.6.5-1+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../01-libaprutil1_1.6.1-4ubuntu2_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-4ubuntu2) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../02-libaprutil1-dbd-sqlite3_1.6.1-4ubuntu2_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-4ubuntu2) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../03-libaprutil1-ldap_1.6.1-4ubuntu2_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-4ubuntu2) ...
+Selecting previously unselected package libjansson4:amd64.
+Preparing to unpack .../04-libjansson4_2.12-1build1_amd64.deb ...
+Unpacking libjansson4:amd64 (2.12-1build1) ...
+Selecting previously unselected package liblua5.2-0:amd64.
+Preparing to unpack .../05-liblua5.2-0_5.2.4-1.1build3_amd64.deb ...
+Unpacking liblua5.2-0:amd64 (5.2.4-1.1build3) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../06-apache2-bin_2.4.46-2+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking apache2-bin (2.4.46-2+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../07-apache2-data_2.4.46-2+ubuntu20.04.1+deb.sury.org+1_all.deb ...
+Unpacking apache2-data (2.4.46-2+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../08-apache2-utils_2.4.46-2+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking apache2-utils (2.4.46-2+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../09-apache2_2.4.46-2+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking apache2 (2.4.46-2+ubuntu20.04.1+deb.sury.org+1) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../10-ssl-cert_1.0.39_all.deb ...
+Unpacking ssl-cert (1.0.39) ...
+Setting up libapr1:amd64 (1.6.5-1+ubuntu20.04.1+deb.sury.org+1) ...
+Setting up libjansson4:amd64 (2.12-1build1) ...
+Setting up ssl-cert (1.0.39) ...
+Setting up liblua5.2-0:amd64 (5.2.4-1.1build3) ...
+Setting up apache2-data (2.4.46-2+ubuntu20.04.1+deb.sury.org+1) ...
+Setting up libaprutil1:amd64 (1.6.1-4ubuntu2) ...
+Setting up libaprutil1-ldap:amd64 (1.6.1-4ubuntu2) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-4ubuntu2) ...
+Setting up apache2-utils (2.4.46-2+ubuntu20.04.1+deb.sury.org+1) ...
+Setting up apache2-bin (2.4.46-2+ubuntu20.04.1+deb.sury.org+1) ...
+Setting up apache2 (2.4.46-2+ubuntu20.04.1+deb.sury.org+1) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+Job for apache2.service failed because the control process exited with error code.
+See "systemctl status apache2.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript apache2, action "start" failed.
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sun 2020-08-23 13:54:18 UTC; 8ms ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 16012 ExecStart=/usr/sbin/apachectl start (code=exited, status=1/FAILURE)
+
+Aug 27 13:54:18 dann apachectl[16022]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+Aug 27 13:54:18 dann apachectl[16022]: (98)Address already in use: AH00072: make_sock: could not bind to address [::]:80
+Aug 27 13:54:18 dann apachectl[16022]: (98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0.0:80
+Aug 27 13:54:18 dann apachectl[16022]: no listening sockets available, shutting down
+Aug 27 13:54:18 dann apachectl[16022]: AH00015: Unable to open logs
+Aug 27 13:54:18 dann apachectl[16012]: Action 'start' failed.
+Aug 27 13:54:18 dann apachectl[16012]: The Apache error log may have more information.
+Aug 27 13:54:18 dann systemd[1]: apache2.service: Control process exited, code=exited, status=1/FAILURE
+Aug 27 13:54:18 dann systemd[1]: apache2.service: Failed with result 'exit-code'.
+Aug 27 13:54:18 dann systemd[1]: Failed to start The Apache HTTP Server.
+Processing triggers for systemd (245.4-4ubuntu3.2) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9) ...
+root@dann:/etc/php/7.2/fpm# cd /etc/nginx
+root@dann:/etc/nginx# systemctl restart apache2.service
+Job for apache2.service failed because the control process exited with error code.
+See "systemctl status apache2.service" and "journalctl -xe" for details.
+root@dann:/etc/nginx# systemctl status apache2.service
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sun 2020-08-23 14:01:27 UTC; 16s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 16470 ExecStart=/usr/sbin/apachectl start (code=exited, status=1/FAILURE)
+
+Aug 27 14:01:27 dann apachectl[16478]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1>
+Aug 27 14:01:27 dann apachectl[16478]: (98)Address already in use: AH00072: make_sock: could not bind to address [::]:80
+Aug 27 14:01:27 dann apachectl[16478]: (98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0.0:80
+Aug 27 14:01:27 dann apachectl[16478]: no listening sockets available, shutting down
+Aug 27 14:01:27 dann apachectl[16478]: AH00015: Unable to open logs
+Aug 27 14:01:27 dann apachectl[16470]: Action 'start' failed.
+Aug 27 14:01:27 dann apachectl[16470]: The Apache error log may have more information.
+Aug 27 14:01:27 dann systemd[1]: apache2.service: Control process exited, code=exited, status=1/FAILURE
+Aug 27 14:01:27 dann systemd[1]: apache2.service: Failed with result 'exit-code'.
+Aug 27 14:01:27 dann systemd[1]: Failed to start The Apache HTTP Server.
+lines 1-16/16 (END)
+systemctl status apache2.service
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sun 2020-08-23 14:01:27 UTC; 55s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 16470 ExecStart=/usr/sbin/apachectl start (code=exited, status=1/FAILURE)
+
+Aug 27 14:01:27 dann apachectl[16478]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1>
+Aug 27 14:01:27 dann apachectl[16478]: (98)Address already in use: AH00072: make_sock: could not bind to address [::]:80
+Aug 27 14:01:27 dann apachectl[16478]: (98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0.0:80
+Aug 27 14:01:27 dann apachectl[16478]: no listening sockets available, shutting down
+Aug 27 14:01:27 dann apachectl[16478]: AH00015: Unable to open logs
+Aug 27 14:01:27 dann apachectl[16470]: Action 'start' failed.
+Aug 27 14:01:27 dann apachectl[16470]: The Apache error log may have more information.
+Aug 27 14:01:27 dann systemd[1]: apache2.service: Control process exited, code=exited, status=1/FAILURE
+Aug 27 14:01:27 dann systemd[1]: apache2.service: Failed with result 'exit-code'.
+Aug 27 14:01:27 dann systemd[1]: Failed to start The Apache HTTP Server.
+lines 1-16/16 (END)
+root@dann:/etc/nginx# cd /etc
+root@dann:/etc# nano /etc/apache2/apache2.conf
+root@dann:/etc# nano /etc/apache2/ports.conf
+root@dann:/etc# systemctl restart apache2.service
+root@dann:/etc# systemctl status apache2.service
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2020-08-23 14:05:23 UTC; 6s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 16592 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+   Main PID: 16614 (apache2)
+      Tasks: 55 (limit: 4621)
+     Memory: 4.9M
+     CGroup: /system.slice/apache2.service
+             ├─16614 /usr/sbin/apache2 -k start
+             ├─16615 /usr/sbin/apache2 -k start
+             └─16616 /usr/sbin/apache2 -k start
+
+Aug 27 14:05:22 dann systemd[1]: Starting The Apache HTTP Server...
+Aug 27 14:05:22 dann apachectl[16605]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1>
+Aug 27 14:05:23 dann systemd[1]: Started The Apache HTTP Server.
+lines 1-16/16 (END)
+^C
+root@dann:/etc# cd /var/www/mysite.local
+root@dann:/var/www/mysite.local# cat > index.php
+root@dann:/var/www/mysite.local# nano index.php
+root@dann:/var/www/mysite.local
+root@dann:/var/www/mysite.local# sudo apt-get install libapache2-mod-php7.2
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  php-pear
+The following NEW packages will be installed:
+  libapache2-mod-php7.2
+0 upgraded, 1 newly installed, 0 to remove and 18 not upgraded.
+Need to get 1,379 kB of archives.
+After this operation, 4,941 kB of additional disk space will be used.
+Get:1 http://ppa.launchpad.net/ondrej/php/ubuntu focal/main amd64 libapache2-mod-php7.2 amd64 7.2.33-1+ubuntu20.04.1+deb.sury.org+1 [1,379 kB]
+Fetched 1,379 kB in 5s (252 kB/s)           
+Selecting previously unselected package libapache2-mod-php7.2.
+(Reading database ... 72032 files and directories currently installed.)
+Preparing to unpack .../libapache2-mod-php7.2_7.2.33-1+ubuntu20.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking libapache2-mod-php7.2 (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+Setting up libapache2-mod-php7.2 (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/7.2/apache2/php.ini with new version
+Module mpm_event disabled.
+Enabling module mpm_prefork.
+apache2_switch_mpm Switch to prefork
+apache2_invoke: Enable module php7.2
+Processing triggers for libapache2-mod-php7.2 (7.2.33-1+ubuntu20.04.1+deb.sury.org+1) ...
+root@dann:/var/www/mysite.local# systemctl restart apache2.service
+root@dann:/var/www/mysite.local# 
