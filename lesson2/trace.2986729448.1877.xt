@@ -1,0 +1,57 @@
+TRACE START [2020-08-27 06:28:28]
+    0.0004     394352  +394352   -> {main}() /var/www/mysite.local/test.php:0
+    0.0004     394352       +0     -> error_reporting(32767) /var/www/mysite.local/test.php:2
+    0.0005     394384              >=> 22527
+    0.0005     394384      +32     -> ini_set('display_errors', 1) /var/www/mysite.local/test.php:3
+    0.0005     394384              >=> '1'
+    0.0005     394384       +0     -> deep_end($count = 1) /var/www/mysite.local/test.php:14
+    0.0005     394384       +0       -> deep_end($count = 2) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0         -> deep_end($count = 3) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0           -> deep_end($count = 4) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0             -> deep_end($count = 5) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0               -> deep_end($count = 6) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0                 -> deep_end($count = 7) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0                   -> deep_end($count = 8) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0                     -> deep_end($count = 9) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0                       -> deep_end($count = 10) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0                         -> deep_end($count = 11) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0                           -> deep_end($count = 12) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0                             -> deep_end($count = 13) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0                               -> deep_end($count = 14) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0                                 -> deep_end($count = 15) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0                                   -> deep_end($count = 16) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0                                     -> deep_end($count = 17) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0                                       -> deep_end($count = 18) /var/www/mysite.local/test.php:8
+    0.0006     394384       +0                                         -> deep_end($count = 19) /var/www/mysite.local/test.php:8
+    0.0007     394384       +0                                           -> deep_end($count = 20) /var/www/mysite.local/test.php:8
+    0.0007     394384       +0                                             -> deep_end($count = 21) /var/www/mysite.local/test.php:8
+    0.0007     394384       +0                                               -> deep_end($count = 22) /var/www/mysite.local/test.php:8
+    0.0007     394384       +0                                                 -> deep_end($count = 23) /var/www/mysite.local/test.php:8
+    0.0007     394384       +0                                                   -> deep_end($count = 24) /var/www/mysite.local/test.php:8
+    0.0007     394384       +0                                                     -> deep_end($count = 25) /var/www/mysite.local/test.php:8
+    0.0007     394384       +0                                                       -> deep_end($count = 26) /var/www/mysite.local/test.php:8
+    0.0007     394384       +0                                                         -> deep_end($count = 27) /var/www/mysite.local/test.php:8
+    0.0007     394384       +0                                                           -> deep_end($count = 28) /var/www/mysite.local/test.php:8
+    0.0007     394384       +0                                                             -> deep_end($count = 29) /var/www/mysite.local/test.php:8
+    0.0007     394384       +0                                                               -> deep_end($count = 30) /var/www/mysite.local/test.php:8
+    0.0007     394384       +0                                                                 -> deep_end($count = 31) /var/www/mysite.local/test.php:8
+    0.0007     394384       +0                                                                   -> deep_end($count = 32) /var/www/mysite.local/test.php:8
+    0.0007     394384       +0                                                                     -> deep_end($count = 33) /var/www/mysite.local/test.php:8
+    0.0007     394384       +0                                                                       -> deep_end($count = 34) /var/www/mysite.local/test.php:8
+    0.0008     394384       +0                                                                         -> deep_end($count = 35) /var/www/mysite.local/test.php:8
+    0.0008     394384       +0                                                                           -> deep_end($count = 36) /var/www/mysite.local/test.php:8
+    0.0008     394384       +0                                                                             -> deep_end($count = 37) /var/www/mysite.local/test.php:8
+    0.0008     394384       +0                                                                               -> deep_end($count = 38) /var/www/mysite.local/test.php:8
+    0.0008     394384       +0                                                                                 -> deep_end($count = 39) /var/www/mysite.local/test.php:8
+    0.0008     394384       +0                                                                                   -> deep_end($count = 40) /var/www/mysite.local/test.php:8
+    0.0008     394384       +0                                                                                     -> deep_end($count = 41) /var/www/mysite.local/test.php:8
+    0.0008     394384       +0                                                                                       -> deep_end($count = 42) /var/www/mysite.local/test.php:8
+    0.0008     394384       +0                                                                                         -> deep_end($count = 43) /var/www/mysite.local/test.php:8
+    0.0008     394384       +0                                                                                           -> deep_end($count = 44) /var/www/mysite.local/test.php:8
+    0.0008     394384       +0                                                                                             -> deep_end($count = 45) /var/www/mysite.local/test.php:8
+    0.0008     394384       +0                                                                                               -> deep_end($count = 46) /var/www/mysite.local/test.php:8
+    0.0008     394384       +0                                                                                                 -> deep_end($count = 47) /var/www/mysite.local/test.php:8
+    0.0008     394384       +0                                                                                                   -> trigger_error('going off the deep end!') /var/www/mysite.local/test.php:10
+    0.0015     403064                                                                                                            >=> TRUE
+    0.0017     316240
+TRACE END   [2020-08-27 06:28:28]
